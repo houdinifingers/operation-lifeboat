@@ -1,3 +1,4 @@
+#!/bin/bash
 # Install latest stable version of helm 3
 
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
