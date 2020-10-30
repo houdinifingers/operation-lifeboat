@@ -12,7 +12,7 @@ mkdir /k3s-storage
 
 echo "In order to use the local path provisioner, please set the storageClass name as 'local-path' when deploying helm charts."
 echo "Before deploying a helm chart that you want to include persistent storage, "
-echo" please create a directory within /k3s-storage for that application,"
+echo "please create a directory within /k3s-storage for that application,"
 echo "and ensure your volume mounts point to that directory."
 
 # Create the PersistentVolumeClaim in Kubernetes
