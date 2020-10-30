@@ -25,7 +25,7 @@ datacenter.  Make sure it has 8 or more cpu cores, 16 or more GB of ram and we r
 more of disk space.
 3. Download the latest k3os .iso for your architecture (most likely k30s-amd64.iso).
 You can download the .iso from this link https://github.com/rancher/k3os/releases/
-* OPTIONAL:  If you're super cool.  Remaster the ISO with a `k3os.password=<your-password>` kernel parameter in the grub config and skip steps 5 through 8.
+### OPTIONAL:  If you're super cool.  Remaster the ISO with a `k3os.password=<your-password>` kernel parameter in the grub config and skip steps 5 through 8.
 4. When the system boots it will display the grub boot loader with some options, you
 will want to use the option to install k3os.  You will be prompted for a few options,
 if you don't know what those options do it's best to leave them set to default.
