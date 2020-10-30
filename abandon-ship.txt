@@ -1,0 +1,161 @@
+Hey if you're reading this, these steps are best performed by a linux administrator, or someone
+with some linux experience, but this guide is written for someone with little to no linux
+experience.  Try to follow the instructions to the best of your ability.  If you get stuck,
+shoot us a message in GitHub and we'll do what we can to help.
+
+This "infrastructure in a box" is intended for use during a cyberattack where most or all of your
+normal infrastructure is down, unavailable, or compromised.  This will provide all specified users
+with a user account, password vault, email, chat program, and ticketing system. The users credentials
+for login are stored in the password vault.  All users' vault passwords will be written to the
+/tmp/userinit.txt on the k3os server you will stand up.  Distribute them to the users so they can
+get their username and password to log into email, chat and ticketing system. All accounts will be
+formatted firstname.lastname and email addresses firstname.lastname@domain.
+
+
+Now on to the install!
+
+### INSTALL STEPS ###
+
+1. Breath!  It's going to be ok. This too shall pass.
+
+2. Find a nice beefy pizza box that's now collecting dust in your shattered husk of a
+datacenter.  Make sure it has 8 or more cpu cores and 16GB or more of ram and with some
+decent storage we recommend 100GB or more.
+
+3. Download the latest k3os .iso for your architecture (most likely k30s-amd64.iso).
+You can download the .iso from this link https://github.com/rancher/k3os/releases/
+
+OPTIONAL:  If you're super cool, remaster the ISO with a k3os.password=<your-password> kernel
+parameter in the grub config and skip steps 5 through 7.
+
+4. When the system boots it will display the grub boot loader with some options, you
+will want to use the option to install k3os.  You will be prompted for a few options,
+if you don't know what those options do it's best to leave them set to default.  After
+the install completes reboot the server.
+
+5. When the system reboots the grub loader will be displayed again with a countdown.
+Hit the "e" key to go into edit mode.
+
+6. At the line that starts with linux put k3os.password=<your-password> at the end of
+the line.
+
+7. Hit the F10 key to boot into k3os.
+
+8. Log in to the server with the user "rancher" and the password you created in step 3
+or step 6.
+
+9. Install helm version 3 by entering ,in order, the following commands:
+cd /tmp
+wget https://get.helm.sh/helm-v3.4.0-linux-amd64.tar.gz
+tar -zxvf helm-v3.4.0-linux-amd64.tar.gz
+mv linux-amd64/helm /usr/local/bin/helm
+
+10. Check that helm is installed by running the following command:
+helm help
+
+NOTE: This should display the helm help page, if it doesn't step 9 was not performed
+properly
+
+11. Change directory to /var with the following command:
+cd /var
+
+12. wget repo
+# needs work
+
+12. Copy the minnow-template.csv in the repository and fill it out with users you would
+like to be able to access this environment.
+
+13. Rename the template from step 12 to "minnowii.csv" and put it back in the /var
+
+14. Run bootstrap.sh with the following command:
+./bootstrap.sh
+
+### STAGE ZERO HUMAN SETUP ###
+
+# github account private repo
+
+### STAGE ZERO CONFIG MAPPING ######
+
+##################################################################
+# what do we need for a functional domain from the users? (KISS) #
+##################################################################
+
+# domain name
+# initial cluster IPs
+# Bitwarden Master Password
+# Multi Factor config info
+
+# minnowii (user provisioning file)
+# firstname,lastname,mobile,groups,role(professor|gilligan),skipper-bool (skipper-bool will create a skipper account for this user separate from ldap user)
+
+### STAGE ONE INSTALL ######
+
+############################
+# install rancher/rke here #
+############################
+
+# feed it list of node IPs of the initial cluster
+
+###################
+# install FreeIPA #
+###################
+
+# register initial cluster list with dns at this point
+
+########################
+# configure two factor #
+########################
+
+##########################
+# install bitwarden here #
+##########################
+
+# script auto generates random passwords for initial users and writes to a file that git ignores
+# master keepass password and local admins (skipper1,skipper2,skipper3,etc...)
+
+######################### NTH
+# install elkstack here #
+#########################
+
+########################
+# install jenkins here #
+########################
+
+# jenkins form for provisioning machines
+# jenkins form for provisioning users
+
+#####################
+# install jira here #
+#####################
+
+# Figure out how to create groups and starter workflow for cirt response, should allow for internal IT work only. all members of each group have admin access within unit democratized.
+
+########################
+# install postfix here #
+########################
+
+# configure mail server easy mode
+
+###########################
+# install rocketchat here #
+###########################
+
+# configure rocket chat
+
+################################
+# install desktop as a service #
+################################
+
+# Container desktop as a service spins based on demand (skipper/non-skipper)
+
+# create folder on desktop structure with links to all infrastructure tools setup
+
+### STAGE TWO CHATOPPS PROVISIONING ###
+
+# 1 chatopps room for provisioning users (non-priv) *note* after initialization only the way to provision more privilidged users is using skipper accounts
+
+# 1 monitoring/alerting chatops room for K8s muted by default
+
+# 1 monitorng/alerting chatops room for NODE OS/HW performance
+
+# rooms instantiated for each group
