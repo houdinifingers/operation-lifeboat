@@ -44,5 +44,5 @@ the line.
 14. Retrieve `minnow-template.csv` from your incident response team.
 15. Rename the returned template from step 14 to `minnowii.csv` and put it back in the `/var` directory. # break out into more steps for file transfer.
 16. Run bootstrap.sh with the following command: `./bootstrap.sh --domain-name "your-domain"`
-## EXAMPLE: `./bootstrap.sh --domain-name firestorm.org`
+### EXAMPLE: `./bootstrap.sh --domain-name firestorm.org`
 17. Breathe!  You've completed the setup, go to your vault and get back in the fight.
