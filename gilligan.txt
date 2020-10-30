@@ -31,7 +31,8 @@ This user guide will outline everything you and your team needs to start rebuild
 
 9. Log in to your Ticketing system with the account information from step 3.
 
-10. Save all three browser tabs you just opened to bookmarks in your web browser.
+10. Save all three browser tabs you just opened to bookmarks in your web browser.  These will be your
+portal into a coordinated cybersecurity incident response.
 
 11. Experiment!  Begin to familiarize yourself with these three systems they are your lifeline
 back to a functioning enterprise.
