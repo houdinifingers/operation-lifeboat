@@ -36,17 +36,13 @@ Hit the "e" key to go into edit mode.
 the line.
 8. Hit the `F10` key to boot into k3os.
 9. Log in to the server with the user `rancher` and the password you created in step 3 or step 7.
-10. Change directory to /var with the following command:
-* `cd /var`
+10. Change directory to `/var` with the following command: `cd /var`
 11. wget repo _(Needs work)_
-12. run sos setup script with the following command:
-* `./operation-lifeboat/scripts/helm-install.sh`
-13. Check that helm is installed by running the following command:
-* `helm help`
+12. run sos setup script with the following command: `./operation-lifeboat/scripts/helm-install.sh`
+13. Check that helm is installed by running the following command: `helm help`
 * NOTE: This should display the helm help page, if it doesn't the sos.sh script from step 12 did not run properly.
 14. Retrieve `minnow-template.csv` from your incident response team.
 15. Rename the returned template from step 14 to `minnowii.csv` and put it back in the `/var` directory. # break out into more steps for file transfer.
-16. Run bootstrap.sh with the following command:
-* `./bootstrap.sh --domain-name "your-domain"`
-EXAMPLE: `./bootstrap.sh --domain-name firestorm.org`
+16. Run bootstrap.sh with the following command: `./bootstrap.sh --domain-name "your-domain"`
+## EXAMPLE: `./bootstrap.sh --domain-name firestorm.org`
 17. Breathe!  You've completed the setup, go to your vault and get back in the fight.
