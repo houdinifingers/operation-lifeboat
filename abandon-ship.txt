@@ -19,7 +19,7 @@ Now on to the install!
 
 ### INSTALL STEPS ###
 
-1. Breath!  It's going to be ok. This too shall pass.
+1. Breathe!  It's going to be ok. This too shall pass.
 
 2. Find a nice beefy pizza box server that's now collecting dust in your shattered husk of a
 datacenter.  Make sure it has 8 or more cpu cores, 16 or more GB of ram and we recommend 100GB
@@ -52,6 +52,7 @@ cd /tmp
 wget https://get.helm.sh/helm-v3.4.0-linux-amd64.tar.gz
 tar -zxvf helm-v3.4.0-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
+# Needs work
 
 10. Check that helm is installed by running the following command:
 helm help
@@ -63,7 +64,7 @@ properly
 cd /var
 
 12. wget repo
-# needs work
+# Needs work
 
 13. Copy the minnow-template.csv in the repository and fill it out with users you would
 like to be able to access this environment.
@@ -75,4 +76,4 @@ like to be able to access this environment.
 
 EXAMPLE: ./bootstrap.sh --domain-name firestorm.org
 
-16. Breath!  You've completed the setup.
+16. Breathe!  You've completed the setup.
