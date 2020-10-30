@@ -49,8 +49,7 @@ the line.
 10. Change directory to /var with the following command:
 * `cd /var`
 
-11. wget repo
-# Needs work
+11. wget repo _(Needs work)_
 
 12. run sos setup script with the following command:
 * `./operation-lifeboat/scripts/helm-install.sh`
