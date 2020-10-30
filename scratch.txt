@@ -1,3 +1,5 @@
+###### delete before final release ######
+
 ### STAGE ZERO HUMAN SETUP ###
 
 # github account private repo
@@ -52,7 +54,7 @@
 # jenkins form for provisioning machines
 # jenkins form for provisioning users
 
-##################### 
+#####################
 # install jira here #
 #####################
 
@@ -86,7 +88,4 @@
 
 # 1 monitorng/alerting chatops room for NODE OS/HW performance
 
-# rooms instantiated for each group 
-
-
-
+# rooms instantiated for each group
