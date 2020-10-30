@@ -1,4 +1,6 @@
-Hello there.  If you are reading this your organization is probably in rough shape and things are
+# Hello there.
+
+If you are reading this your organization is probably in rough shape and things are
 probably looking pretty scary.  Don't worry, we're professionals!  We'll get things back up and
 running in no time!
 
