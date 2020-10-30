@@ -17,7 +17,7 @@ This user guide will outline everything you and your team needs to start rebuild
 
 2. Use the username and password you were given to login.
 
-3. Click on firstname.lastname entry to retireve your user account and password"
+3. Click on the firstname.lastname entry to retireve your user account and password"
 
 4. In a web browser navigate to "Email system URL here"
 
