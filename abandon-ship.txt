@@ -47,28 +47,34 @@ the line.
 
 9. Log in to the server with the user "rancher" and the password you created in step 3 or step 7.
 
+10. Change directory to /var with the following command:
+cd /var
+
+11. wget repo
+# Needs work
+
+12. run sos setup script with the following command:
+./operation-lifeboat/scripts/sos.sh
+
+### Depreciated by sos.sh script ###
 10. Install helm version 3 by entering ,in order, the following commands:
 cd /tmp
 wget https://get.helm.sh/helm-v3.4.0-linux-amd64.tar.gz
 tar -zxvf helm-v3.4.0-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
 # Needs work
+### Depreicated by sos.sh script ###
 
-11. Check that helm is installed by running the following command:
+13. Check that helm is installed by running the following command:
 helm help
 
-NOTE: This should display the helm help page, if it doesn't step 10 was not performed properly.
-
-12. Change directory to /var with the following command:
-cd /var
-
-13. wget repo
-# Needs work
+NOTE: This should display the helm help page, if it doesn't the sos.sh script from step 12 did
+not run properly.
 
 14. Retrieve minnow-template.csv from your incident response team.
 
 15. Rename the returned template from step 14 to "minnowii.csv" and put it back in the /var
-directory.
+directory. # break out into more steps for file transfer.
 
 16. Run bootstrap.sh with the following command:
 ./bootstrap.sh --domain-name "your-domain"
