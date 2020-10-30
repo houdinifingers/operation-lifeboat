@@ -1,0 +1,14 @@
+Hello there.  If you are reading this your organization is probably in rough shape and things are
+probably looking pretty scary.  Don't worry, we're professionals!  We'll get things back up and
+running in no time!
+
+I want to take some time and explain what we're trying to do here.  In a cyberattack, the attackers
+generally try cause as much confusion as possible.  They may take down critical infrastructure systems
+leaving your organization's computer systems with limited ability to communicate and work.
+
+opperation-lifeboat is a tool to get your organization limping back to it's feet as fast as possible.
+We are going to accomplish this by giving your organization email, chat, and a ticketing system for
+tracking work.  This is all built on a secure by design architecture using linux containers that keep
+the bad guys out and let you and your co-workers regroup from a position of strength.
+
+This user guide will outline everything you and your team needs to start rebuilding your enterprise.
