@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c -f freeipa.yml
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: www
+  name: www
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: www
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c -f freeipa.yml
+        kompose.version: 1.22.0 (955b78124)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: www
+    spec:
+      containers:
+        - image: www
+          name: www
+          resources: {}
+          volumeMounts:
+            - mountPath: /data
+              name: www-claim0
+            - mountPath: /sys/fs/cgroup
+              name: www-claim1
+              readOnly: true
+      hostname: www
+      restartPolicy: Always
+      subdomain: example.test
+      volumes:
+        - name: www-claim0
+          persistentVolumeClaim:
+            claimName: www-claim0
+        - name: www-claim1
+          persistentVolumeClaim:
+            claimName: www-claim1
+            readOnly: true
+status: {}
